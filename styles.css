@@ -1,0 +1,236 @@
+/* ==========================================
+   PALETAS DE COLORES (VARIABLES CSS)
+   Paleta por defecto: BNH Medical
+   - Azul petróleo / teal principal: #006085
+   - Verde médico acento: #72AE8F
+   - Gris pizarra texto secundario: #68708A
+   ========================================== */
+:root,
+[data-paleta="bnh-medical"] {
+  --fondo-pagina: #f2f6f8;
+  --fondo-tarjeta: #ffffff;
+  --fondo-api: #f7fafb;
+  --texto-principal: #006085;
+  --texto-secundario: #68708A;
+  --borde-suave: #d5e2e8;
+  --color-primario: #006085;
+  --color-primario-hover: #004966;
+  --color-acento: #72AE8F;
+  --color-acento-suave: #e7f3ed;
+  --color-error: #b91c1c;
+}
+
+[data-paleta="clinico-claro"] {
+  --fondo-pagina: #f6f9f8;
+  --fondo-tarjeta: #ffffff;
+  --fondo-api: #f9fbfa;
+  --texto-principal: #1e293b;
+  --texto-secundario: #68708A;
+  --borde-suave: #dce6e2;
+  --color-primario: #72AE8F;
+  --color-primario-hover: #589375;
+  --color-acento: #006085;
+  --color-acento-suave: #e6f2f6;
+  --color-error: #b91c1c;
+}
+
+[data-paleta="ejecutivo-oscuro"] {
+  --fondo-pagina: #0b1922;
+  --fondo-tarjeta: #122633;
+  --fondo-api: #173040;
+  --texto-principal: #eef6f9;
+  --texto-secundario: #9fb0be;
+  --borde-suave: #244254;
+  --color-primario: #72AE8F;
+  --color-primario-hover: #5c9879;
+  --color-acento: #38bdf8;
+  --color-acento-suave: #19384a;
+  --color-error: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--fondo-pagina);
+  color: var(--texto-principal);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contenedor {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-marca {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.encabezado h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.6rem;
+}
+
+.encabezado p {
+  margin: 0;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+}
+
+.selector-paleta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--fondo-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+}
+
+select {
+  border: 1px solid var(--borde-suave);
+  border-radius: 6px;
+  padding: 6px 10px;
+  background-color: var(--fondo-api);
+  color: var(--texto-principal);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.seccion {
+  background-color: var(--fondo-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-top: 4px solid var(--color-acento);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 96, 133, 0.05);
+}
+
+.seccion h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+}
+
+.descripcion-seccion {
+  margin: 0 0 14px 0;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+}
+
+.grid-apis {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.tarjeta-api {
+  background-color: var(--fondo-api);
+  border: 1px solid var(--borde-suave);
+  border-left: 4px solid var(--color-primario);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.tarjeta-api h3 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  color: var(--texto-principal);
+}
+
+.tarjeta-api p {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+}
+
+.tarjeta-api a {
+  color: var(--color-primario);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  word-break: break-all;
+}
+
+.tarjeta-api a:hover {
+  text-decoration: underline;
+}
+
+.fila-login {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type="password"] {
+  padding: 10px 12px;
+  border: 1px solid var(--borde-suave);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  min-width: 220px;
+  background-color: var(--fondo-api);
+  color: var(--texto-principal);
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primario);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-primario-hover);
+}
+
+.btn-secundario {
+  background-color: var(--texto-secundario);
+}
+
+.btn-secundario:hover {
+  opacity: 0.9;
+}
+
+.mensaje-error {
+  margin: 8px 0 0 0;
+  color: var(--color-error);
+  font-size: 0.9rem;
+  min-height: 20px;
+}
+
+.acciones-pie {
+  margin-top: 16px;
+}
+
+.oculto {
+  display: none;
+}
