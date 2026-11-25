@@ -19,7 +19,7 @@ const APIS_USUARIOS = [
   {
     nombre: "Calculadora-Cotizacion",
     descripcion: "Calculos para indicar precios a clientes",
-    url: "https://bnhrpagos.vercel.app/"
+    url: "https://cotizav1.vercel.app/"
   },
   {
     nombre: "Reporte de pago",
