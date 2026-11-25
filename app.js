@@ -21,11 +21,7 @@ const APIS_USUARIOS = [
     descripcion: "Calculos para indicar precios a clientes",
     url: "https://cotizav1.vercel.app/"
   },
-  {
-    nombre: "Reporte de pago",
-    descripcion: "Reportar pagos de clientes BNH o VIVA.",
-    url: "https://cotizav1.vercel.app/"
-  },
+ 
   {
     nombre: "Reporte Servicio tecnico",
     descripcion: "Reportar incidencia de clientes",
