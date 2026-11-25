@@ -65,11 +65,6 @@ const APIS_GERENCIALES = [
     nombre: "Panel de servicio tecnico",
     descripcion: "Reporte de insidencia y respuesta de los tecnicos.",
     url: "https://serviciotbnh.vercel.app/dashboard"
-  },
-  {
-    nombre: "API de Control de Accesos",
-    descripcion: "Gestión de permisos y auditoría interna.",
-    url: "https://api.ejemplo.com/gerencia/v1/accesos"
   }
 ];
 
