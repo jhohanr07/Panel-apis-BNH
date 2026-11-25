@@ -21,14 +21,9 @@ const APIS_USUARIOS = [
     nombre: "Calculadora-Cotizacion",
     tipo: "Herramienta",
     descripcion: "Calculos para indicar precios a clientes",
-    url: "https://bnhrpagos.vercel.app/"
-  },
-  {
-    nombre: "Reporte de pago",
-    tipo: "Cotización",
-    descripcion: "Reportar pagos de clientes BNH o VIVA.",
     url: "https://cotizav1.vercel.app/"
   },
+ 
   {
     nombre: "Reporte Servicio tecnico",
     tipo: "Soporte",
