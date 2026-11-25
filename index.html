@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" data-paleta="bnh-medical">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directorio de APIs — BNH Medical</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="contenedor">
+    <!-- Encabezado con logotipo corregido y selector de paleta -->
+    <header class="encabezado">
+      <div class="marca">
+        <div class="logo-marco">
+          <img
+            src="./bnh-medical-logo.png"
+            onerror="this.onerror=null;this.src='assets/bnh-medical-logo.png';"
+            alt="Logo BNH Medical"
+            class="logo-marca"
+          />
+        </div>
+        <div class="marca-texto">
+          <span class="insignia-marca">BNH MEDICAL · PORTAL DE APIs</span>
+          <h1>Directorio de APIs</h1>
+          <p>Acceso libre para usuarios generales y sección protegida con clave para gerencia.</p>
+        </div>
+      </div>
+
+      <div class="controles-superiores">
+        <div class="selector-paleta" aria-label="Selector de paleta de colores">
+          <label for="select-paleta">Paleta</label>
+          <select id="select-paleta">
+            <option value="bnh-medical">BNH Medical · Teal #006085</option>
+            <option value="clinico-claro">Clínico Claro · Verde #72AE8F</option>
+            <option value="ejecutivo-oscuro">Ejecutivo Oscuro</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <!-- Barra de búsqueda rápida y contador -->
+    <section class="barra-herramientas" aria-label="Filtrar APIs">
+      <div class="campo-busqueda">
+        <svg class="icono-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" stroke-linecap="round" />
+        </svg>
+        <input
+          type="search"
+          id="input-busqueda"
+          placeholder="Buscar API por nombre, descripción o enlace..."
+          aria-label="Buscar API"
+        />
+      </div>
+      <span id="contador-apis" class="contador-apis">7 APIs visibles</span>
+    </section>
+
+    <!-- Sección de acceso libre para usuarios normales -->
+    <section class="seccion" aria-labelledby="titulo-usuarios">
+      <div class="seccion-cabecera">
+        <div>
+          <h2 id="titulo-usuarios">Panel de Usuarios Normales</h2>
+          <p class="descripcion-seccion">APIs disponibles sin necesidad de clave.</p>
+        </div>
+        <span class="etiqueta-estado etiqueta-libre">Acceso libre</span>
+      </div>
+      <div id="lista-usuarios" class="grid-apis"></div>
+    </section>
+
+    <!-- Sección restringida para gerencia -->
+    <section class="seccion seccion-gerencial" aria-labelledby="titulo-gerencial">
+      <div class="seccion-cabecera">
+        <div>
+          <h2 id="titulo-gerencial">Panel Gerencial</h2>
+          <p class="descripcion-seccion">
+            Ingresa la clave gerencial para visualizar los enlaces restringidos.
+          </p>
+        </div>
+        <span id="estado-gerencial" class="etiqueta-estado etiqueta-bloqueado">Restringido</span>
+      </div>
+
+      <!-- Formulario de acceso -->
+      <div id="bloque-login">
+        <div class="fila-login">
+          <input
+            type="password"
+            id="input-clave"
+            placeholder="Escribe la clave gerencial"
+            aria-label="Clave gerencial"
+          />
+          <button id="btn-desbloquear" type="button" class="btn-primario">
+            <svg class="icono-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="10" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <span>Desbloquear</span>
+          </button>
+        </div>
+        <p id="mensaje-error" class="mensaje-error" role="alert"></p>
+      </div>
+
+      <!-- Contenido visible solo tras ingresar la clave correcta -->
+      <div id="contenido-gerencial" class="oculto">
+        <div id="lista-gerencial" class="grid-apis"></div>
+        <div class="acciones-pie">
+          <button id="btn-bloquear" type="button" class="btn-secundario">
+            <svg class="icono-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="10" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <span>Bloquear panel</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
