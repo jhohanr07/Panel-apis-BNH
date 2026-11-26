@@ -71,6 +71,12 @@ const APIS_GERENCIALES = [
     url: "https://bnhrpagos.vercel.app/admin"
   },
   {
+    nombre: "Aprobacion de viaticos",
+    tipo: "Viaticos",
+    descripcion: "Panel de aprobacion de viaticos",
+    url: "https://script.google.com/a/macros/bnhmedical.com/s/AKfycbxUZaFQEDFcLT9UoErtTaIK228WDE0kC2O1Zx1KTyxB-MXG8OYuu7nGDMmFpF6GQQuS/exec?vista=pendientes"
+  },
+  {
     nombre: "Panel de servicio tecnico",
     tipo: "Dashboard",
     descripcion: "Reporte de insidencia y respuesta de los tecnicos.",
