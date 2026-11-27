@@ -83,10 +83,10 @@ const APIS_GERENCIALES = [
     url: "https://serviciotbnh.vercel.app/dashboard"
   },
   {
-    nombre: "API de Control de Accesos",
-    tipo: "Seguridad",
-    descripcion: "Gestión de permisos y auditoría interna.",
-    url: "https://api.ejemplo.com/gerencia/v1/accesos"
+    nombre: "Inventario de repuestos",
+    tipo: "Inventario",
+    descripcion: "Entrada y salidad de piezas y partes",
+    url: "https://repuestosbnh.vercel.app/"
   }
 ];
 
